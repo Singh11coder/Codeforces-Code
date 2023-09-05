@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        string h;
+        vector<string>v;
+        for(int i=0;i<2*n-2;i++)
+        {
+            cin>>h;
+            if(h.length()==n-1)
+            {
+              v.push_back(h);
+            }
+        }
+        string o=v[0];
+        string m=v[1];
+        reverse(m.begin(),m.end());
+        if(o==m)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+}

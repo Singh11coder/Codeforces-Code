@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        char d;
+        cin>>d;
+        string g;
+        char a;
+        for(int i=0;i<n;i++)
+        {
+            cin>>a;
+            g.push_back(a);
+        }
+        string b;
+        int u=0;
+        int flag=0;
+        for(int i=0;i<g.length();i++)
+        {
+            if(g[i]<d)
+            {
+                flag=1;
+                b.push_back(d);
+                u=i;
+                break;
+            }
+            b.push_back(g[i]);
+        }
+        if(flag==0)
+        {
+            b.push_back(d);
+        }
+        else
+        {
+            for(int i=u;i<g.length();i++)
+            {
+                b.push_back(g[i]);
+            }
+        }
+       
+
+        cout<<b<<endl;
+    }
+}

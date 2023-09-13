@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        vector<int>v;
+        int y;
+        for(int i=0;i<n;i++)
+        {
+            cin>>y;
+            v.push_back(y);
+        }
+        sort(v.begin(),v.end());
+        int flag=1;
+        for(int i=0;i<v.size()-1;i++)
+        {
+            if(v[i+1]-v[i]<=0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag)
+        {
+            cout<<"YES"<<endl;
+        }
+        else{cout<<"NO"<<endl;}
+    }
+}

@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        vector<int>v(n);
+        int count=0;
+        int count2=0;
+        for(int i=0;i<v.size();i++)
+        {
+            cin>>v[i];
+        }
+        for(int i=0;i<v.size();i++)
+        {
+            if(v[i]==1)
+            {
+                count++;
+            }
+            else
+            {
+                count2++;
+            }
+        }
+        int t=(count/2 +count%2);
+        count2=count2+t;
+        cout<<count2<<endl;
+    }
+}

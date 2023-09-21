@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string u="abc";
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        string h;
+        cin>>h;
+        if(u[0]==h[0]||u[1]==h[1]||u[2]==h[2])
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+}

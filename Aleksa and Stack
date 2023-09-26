@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        long long n;
+        cin>>n;
+        vector<long long>v;
+        long long a=2,b=3;
+        v.push_back(a);
+        v.push_back(b);
+        long long c=a+b;
+        long long k=2;
+        while(k<n)
+        {
+            c=b+1;
+            while((3*c)%(a+b)==0)
+            {
+                c++;
+            }
+            v.push_back(c);
+            a=b;
+            b=c;
+            k++;
+        }
+        
+        for(int i=0;i<v.size();i++)
+        {
+            cout<<v[i]<<" ";
+        }
+        cout<<endl;
+    }
+}

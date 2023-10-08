@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        vector<int>v;
+        int maxi=0;
+        int mini=pow(10,9);
+        int u;
+        for(int i=0;i<n;i++)
+        {
+            cin>>u;
+            v.push_back(u);
+            maxi=max(maxi,u);
+            mini=min(mini,u);
+        }
+        
+        cout<<maxi-mini<<endl;
+    }
+}

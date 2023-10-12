@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n,m;
+        cin>>n>>m;
+        string x;
+        string s;
+        cin>>x;
+        cin>>s;
+        int count=0;
+        int f=0;
+        while(true)
+        {
+            int u=x.find(s);
+             
+             if(u>=0&&u<x.length())
+             {
+                 f=1;
+                 break;
+             }
+             else
+             {
+                 string l=x;
+                 x.append(l);
+                 count++;
+             }
+             if(x.length()>40*s.length())
+             {
+                f=0;
+                break;
+             }
+            
+        }
+        if(f==1){
+        cout<<count<<endl;}
+        else
+        {
+            cout<<"-1"<<endl;
+        }
+    }
+}

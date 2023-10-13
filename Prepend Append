@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        int l=0;
+        int r=s.length()-1;
+        int flag=1;
+        while(flag==1)
+        {
+            if(s[l]!=s[r])
+            {
+                l++;
+                r--;
+            }
+            else if(l>r)
+            {
+               flag=0; 
+            }
+            else
+            {
+                flag=0;
+            }
+        }
+        
+        if(l>r)
+        {
+            cout<<"0"<<endl;
+        }
+        else
+        {
+            cout<<r-l+1<<endl;
+        }
+    }
+}

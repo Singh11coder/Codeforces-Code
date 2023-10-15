@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    long long t;
+    cin>>t;
+    while(t--){
+        long long a,b,d;
+        cin>>a>>b>>d;
+        int m = min({a,b,d});
+
+        bool p = true;
+        int c=0;
+        if(a%m!=0 || b%m!=0 || d%m!=0){
+        p = false;
+        }
+        while(a!=m){
+            if(a%m!=0 || c>3){
+                p = false;
+                break;
+            }
+            a-=m;
+            c++;
+        }
+        while(b!=m){
+            if(b%m!=0 || c>3){
+                p = false;
+                break;
+            }
+            b-=m;
+            c++;
+        }
+        while(d!=m){
+            if(d%m!=0 || c>3){
+                p = false;
+                break;
+            }
+            d-=m;
+            c++;
+        }
+
+        if(c>3){
+            p = false;
+
+        }
+
+        if(p){
+            cout<<"YES"<<endl;
+        }
+        else{
+            cout<<"NO"<<endl;
+        }
+    }
+}

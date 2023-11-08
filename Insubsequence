@@ -1,0 +1,24 @@
+bool isSubsequence(string s, string t) {
+        if(s=="")return true;
+        if(t=="")return false;
+        int left_ptr=0;
+        int right_ptr=0;
+        while(left_ptr<=t.length()-1)
+        {
+            if(s[right_ptr]==t[left_ptr])
+            {
+                right_ptr++;
+                left_ptr++;
+            }
+            else
+            {
+                left_ptr++;
+            }
+
+        }
+        if(right_ptr>s.length()-1)
+        {
+            return true;
+        }
+         return false;
+    }

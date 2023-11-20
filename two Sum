@@ -1,0 +1,61 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+
+        vector<int>v;
+        vector<int>k;
+        v=nums;
+        sort(v.begin(),v.end());
+        // if(target==0)
+        // {
+        //     for(int i=0;i<nums.size();i++)
+        //     {
+        //         if(nums[i]==0)
+        //         {
+        //           k.push_back(i);
+        //         }
+        //     }
+        //     return k;
+        // }
+        int l=0;
+        int r=nums.size()-1;
+        int y;
+        int u;
+        while(l<r)
+        {
+           if(v[l]+v[r]==target)
+           {
+              y=v[l];
+              u=v[r];
+              break;
+           }
+           else if(v[l]+v[r]<target)
+           {
+               l++;
+           }
+           else
+           {
+               r--;
+           }
+        }
+        for(int i=0;i<nums.size();i++)
+        {
+            if(y==nums[i])
+            {
+                k.push_back(i);
+                nums[i]=-231;
+                break;
+            }
+        }
+        for(int i=0;i<nums.size();i++)
+        {
+             if(u==nums[i])
+            {
+                k.push_back(i);
+                break;
+            }
+        }
+
+        return k;
+    }
+};
